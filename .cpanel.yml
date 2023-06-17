@@ -2,3 +2,4 @@
 deployment:
   tasks:
     - export DEPLOYPATH=/home/talu2397/repositories/strapiCourse_film/
+    - /bin/cp -r * $DEPLOYPATH
