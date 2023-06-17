@@ -1,5 +1,5 @@
 ---
 deployment:
   tasks:
-    - export DEPLOYPATH=/home/talu2397/test/strapiCourse_film/
+    - export DEPLOYPATH=/home/talu2397/www/testfilm/
     - /bin/cp -r /home/talu2397/repositories/strapiCourse_film $DEPLOYPATH
