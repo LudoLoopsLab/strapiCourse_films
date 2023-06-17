@@ -10,3 +10,4 @@ if (process.env.NODE_ENV == "development") {
 else {
   strapi({ distDir }).start()
 }
+// test
