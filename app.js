@@ -4,9 +4,15 @@ if (typeof (PhusionPassenger) !== 'undefined') {
 
 const strapi = require('@strapi/strapi')
 const distDir = './dist'
-if (process.env.NODE_ENV == "development") {
-  strapi({ "autoReload": { "enabled": true }, distDir }).start()
+
+async function startStrapi() {
+
+  if (process.env.NODE_ENV == "development") {
+    // Start the Strapi server in development mode
+    await strapi({ autoReload: { enabled: true }, distDir }).start()
+  } else {
+    await strapi({ distDir }).start()
+  }
 }
-else {
-  strapi({ distDir }).start()
-}
+
+startStrapi()
