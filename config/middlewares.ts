@@ -11,8 +11,12 @@ export default [
   {
     name: 'strapi::cors',
     config: {
-      headers: ['*'],
       origin: ['*'],
+      headers: [
+        'Content-Type',
+        'Authorization',
+        'Access-Control-Allow-Origin',
+      ],
       keepHeaderOnError: true,
     }
   },
