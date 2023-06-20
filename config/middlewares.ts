@@ -1,20 +1,18 @@
 export default [
   'strapi::errors',
   'strapi::security',
-
+  'strapi::poweredBy',
+  // 'strapi::cors',
   {
     name: 'strapi::cors',
     config: {
-      origin: ['*'],
+      origin: ['http://localhost:3000'],
       headers: [
-        'Content-Type',
-        'Authorization',
-        'Access-Control-Allow-Origin',
+        '*'
       ],
-      keepHeaderOnError: true,
+      // keepHeaderOnError: true,
     }
   },
-  'strapi::poweredBy',
   'strapi::logger',
   'strapi::query',
   'strapi::body',
